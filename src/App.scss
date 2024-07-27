@@ -1,0 +1,84 @@
+@import './font.scss';
+body{
+  font-family: Sentient Extrat-Light;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,body{
+  height: 100%;
+}
+p{
+  line-height: 1.6;
+  font-family: Sentient Regular;
+}
+h1,h2,h3,h4,h5,h6{
+  font-family: Sentient Bold;
+}
+.content{
+  background-color: #0C0C0C;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  .nav{
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo{
+      img{
+        width: 90px;
+      }
+    }
+  }
+  .container{
+    width: 100%;
+  }
+  main{
+    flex: 1;
+  }
+  .rightNav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 25px;
+  }
+  .header-container{
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    z-index: 1111;
+    &::after{
+      content: '';
+      width: 10px;
+      height: 190px;
+      background: linear-gradient(to top, rgba(242,97,63,1) 0%, rgba(155,57,34,1) 25%, rgba(72,30,20,1) 100%);
+      position: absolute;
+      top: 0;
+      left: -35px;
+      border-top-left-radius: 12px;
+      border-bottom-right-radius: 11px;
+    }
+    &::before{
+      content: '';
+      width: 200px;
+      height: 10px;
+      background: linear-gradient(to right, rgba(72,30,20,1) 10%, rgba(155,57,34,1) 50%, rgba(242,97,63,1) 100%);
+      position: absolute;
+      top: 0;
+      left: -25px;
+      border-bottom-right-radius: 10px;
+    }
+  }
+}
+@media(min-width:1750px){
+  .container{
+    width: 1444px;
+    margin: 0 auto;
+  }
+}
