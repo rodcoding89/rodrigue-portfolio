@@ -33,6 +33,9 @@ h1,h2,h3,h4,h5,h6{
     .logo{
       img{
         width: 90px;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        object-fit: cover;
       }
     }
   }
@@ -41,6 +44,8 @@ h1,h2,h3,h4,h5,h6{
   }
   main{
     flex: 1;
+    z-index: 11111;
+    position: relative;
   }
   .rightNav{
     display: flex;

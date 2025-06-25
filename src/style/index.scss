@@ -106,7 +106,7 @@ header{
     margin: 0 auto;
 }
 .competence{
-    margin-top: calc(250px - 150.25px);
+    margin-top: calc(190px - 150.25px);
 }
 @media(max-width:500px){
     header{
@@ -129,7 +129,7 @@ header{
     width: 50%;
     z-index: 1;
     .searchInput{
-        height: 35px;
+        height: 45px;
         width: 100%;
         border: 1px solid #fff;
         padding: 10px 15px;
@@ -164,6 +164,7 @@ header{
     h1{
         font-size: 3em;
         margin: 15px 0;
+        padding-top: 60px;
     }
 }
 @media(max-width:500px){
@@ -200,6 +201,7 @@ header{
     .project{
         h4{
             margin: 15px 0;
+            padding-top: 60px;
         }
     }
 }
@@ -218,10 +220,12 @@ header{
         }
         .rightbloc{
             width: 80%;
+            justify-content: space-around;
             flex-direction: row-reverse;
         }
     }
 }
+
 @media(max-width:600px){
     .logo{
         img{
@@ -239,7 +243,7 @@ header{
         }
     }
 }
-@media(max-width:450px){
+@media(max-width:615px){
     main{
         .rightbloc{
             flex-direction: column-reverse;
@@ -267,6 +271,15 @@ header{
             font-size: 3rem;
             color: rgba(155,57,34,1);
         }
+    }
+    .about-img{
+        width: 25%;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+    .bloc-about{
+        padding-top: 70px;
     }
 }
 .about-para{
@@ -455,7 +468,7 @@ header{
     align-self: stretch;
     transition:  all .600s ease-out;
     >img{
-        object-fit: contain;
+        object-fit: cover;
         height: 200px;
     }
     .detail{
@@ -469,6 +482,15 @@ header{
             img.avlis,img.wave{
                 width: 40px;
             }
+        }
+        .darkred{
+            color:rgba(155,57,34,1);
+            font-weight: 700;
+        }
+        .item{
+            color: white;
+            font-size: .80rem;
+            font-style: normal;
         }
     }
     &:hover{
@@ -514,9 +536,15 @@ header{
     font-family: Sentient Light;
 }
 .profil-foto{
+    width: 10.5rem;
     img{
+        width: 100%;
+        aspect-ratio: 1 / 1;
         border-radius: 50%;
         object-fit: cover;
+    }
+    @media (max-width:1150px){
+        width: 12.5rem;    
     }
 }
 .projet-list{
@@ -666,6 +694,11 @@ header{
   }
 }
 /************************************************PROJECT**********************************************/
+.space{
+    width: 100%;
+    height: 0px;
+    background-color: transparent;
+}
 .bg-img{
     background-position: center;
     background-repeat: no-repeat;
@@ -673,14 +706,14 @@ header{
     width: 100%;
     position: absolute;
     top: 0;
-    height: 250px;
+    height: 190px;
     filter: brightness(0.5)
 }
 .project-header{
     div.active{
-        width: 20vw;
+        width: 25vw;
         &::before{
-            width: calc(20vw - 2px);
+            width: calc(25vw - 2px);
         }
     }
 }
@@ -699,7 +732,7 @@ header{
         border-right: 1px solid #fff;
         padding: 10px 20px 5px;
         position: relative;
-        width: 10vw;
+        width: 25vw;
         &::before{
             content: '';
             display: block;
@@ -707,7 +740,7 @@ header{
             background-color: #0C0C0C;
             position: absolute;
             bottom: -2px;
-            width: calc(10vw - 2px);
+            width: calc(25vw - 2px);
             left: 0;
         }
     }
@@ -735,14 +768,14 @@ header{
     }
 }
 @media(max-width:1250px){
-    .bloc-competence{
+    /*.bloc-competence{
         div.active{
             width: 15vw;
             &::before{
                 width: calc(15vw - 2px);
             }
         }
-    }
+    }*/
 }
 @media(max-width:850px){
     .project-header{
@@ -768,17 +801,17 @@ header{
     .bloc-competence,.project-header{
         justify-content: flex-start !important;
         div.active{
-            width: 25vw;
+            width: 30vw;
             &::before{
-                width: calc(25vw - 2px);
+                width: calc(30vw - 2px);
             }
         }
     }
     .project-header{
         div.active{
-            width: 23vw;
+            width: 30vw;
             &::before{
-                width: calc(23vw - 2px);
+                width: calc(30vw - 2px);
             }
         }
     }
@@ -814,6 +847,7 @@ header{
     margin: 0 20px;
 }
 .project-detail{
+    margin-top: calc((190px - 126.25px)*1.5);
     .bloc-description{
         margin-top: 15vh;
         margin-bottom: 30px;

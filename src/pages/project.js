@@ -3,8 +3,33 @@ import { SearchProject } from './search-project';
 import { projectList } from './project-data';
 import { Card } from './card';
 
-const sf = ['Développer des sites statics','SEO','Développer des sites dynamiques','Développer des applications web','Intégration continue (CI)','Déploiement continue (CD)', 'Test drive development (TDD)','Développer des applications mobile','Utilisation de GIT pour le versioning','Déployer / Tester(Jest,Cypress) / Déboguer des applications','Traitement des images',"Intégration d'une maquette","Utilisation d'ORM (Prisma)",'Intégration des APIs','Création des APIs de type REST'];
-const se = ['Travailler en équipe','Autonome','Patient','Curieux','Rigoureux',"Capacité d'écoute","Communicatif","Ouvert à l'apprentissage d'autre technologie ou langage"];
+const sf = [
+  "Develop static websites",
+  "SEO",
+  "Develop dynamic websites",
+  "Develop web applications",
+  "Continuous Integration (CI)",
+  "Continuous Deployment (CD)",
+  "Test-Driven Development (TDD)",
+  "Develop mobile applications",
+  "Use GIT for version control",
+  "Deploy / Test (Jest, Cypress) / Debug applications",
+  "Image processing",
+  "Integrate a design/mockup",
+  "Use ORM (Prisma)",
+  "API integration",
+  "Create RESTful APIs","Containerization (Docker)"
+];
+const se = [
+  "Team player",
+  "Autonomous",
+  "Patient",
+  "Curious",
+  "Detail-oriented",
+  "Good listener",
+  "Communicative",
+  "Open to learning new technologies or languages"
+];
 const tools = ['Eclipse','Visual Studio Code','Git','GitHub','GitLab','Sublime Text','SVN','Android studio','Jira','GIMP','Paint.NET','Le terminal(CMD)','phpMyAdmin','MySQL Workbench','MySQL Server','Windows PC']
 export function Project(){
   const [activef,setActivef] = useState('active');
@@ -15,15 +40,13 @@ export function Project(){
   const [personalProject,setPersonalProject] = useState('');
     return (
         <div className='search-container'>
-          <div className='bg-img' style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/assets/images/bg-projects.jpg)` }}>
-          </div>
           <SearchProject/>
           <div className='competence center'>
-            <h3 className='regular'>Compétences</h3>
+            <h3 className='regular'>Skills</h3>
             <div className='bloc-competence'>
-              <div className={activef+' flex justify-content-center align-items-center'} onClick={()=>{setActivef('active');setActivee('');setActiveTools('')}}>Savoir faire</div>
-              <div className={activee + ' flex justify-content-center align-items-center'} onClick={()=>{setActivee('active');setActivef('');setActiveTools('')}}>Savoir être</div>
-              <div className={activetools +' flex justify-content-center align-items-center'} onClick={()=>{setActivee('');setActivef('');setActiveTools('active')}}>Outils</div>
+              <div className={activef+' flex justify-content-center align-items-center'} onClick={()=>{setActivef('active');setActivee('');setActiveTools('')}}>Expertise</div>
+              <div className={activee + ' flex justify-content-center align-items-center'} onClick={()=>{setActivee('active');setActivef('');setActiveTools('')}}>Soft skills</div>
+              <div className={activetools +' flex justify-content-center align-items-center'} onClick={()=>{setActivee('');setActivef('');setActiveTools('active')}}>Tools</div>
             </div>
             <div className='competence-content'>
               <div className='bloc-content'>
@@ -56,11 +79,10 @@ export function Project(){
               </div>
             </div>
             <div className='project-bloc'>
-              <h3 className='regular'>Projets</h3>
+              <h3 className='regular'>Projects</h3>
               <div className='project-header'>
-                  <div className={projectEnterprise + ' flex justify-content-center align-items-center'} onClick={()=>{setProjectEnterprise('active');setPersonalProject('');setProjectTraining('')}}>Projets entreprise</div>
-                  <div className={projectTraining + ' flex justify-content-center align-items-center'} onClick={()=>{setProjectTraining('active');setPersonalProject('');setProjectEnterprise('')}}>Projets formation</div>
-                  <div className={personalProject + ' flex justify-content-center align-items-center'} onClick={()=>{setProjectEnterprise('');setProjectTraining('');setPersonalProject('active')}}>Projets personnels</div>
+                  <div className={projectEnterprise + ' flex justify-content-center align-items-center'} onClick={()=>{setProjectEnterprise('active');setPersonalProject('');setProjectTraining('')}}>Company / Freelance Projects</div>
+                  <div className={projectTraining + ' flex justify-content-center align-items-center'} onClick={()=>{setProjectTraining('active');setPersonalProject('');setProjectEnterprise('')}}>Academic Projects</div>
               </div>
               <div className='project-content'>
                 {

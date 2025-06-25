@@ -3,19 +3,16 @@ import { Link } from 'react-router-dom';
 export function Home(){
     return (
         <div className='home-container center flex align-items-center justify-content-space-between gap40 height87'>
-            <div className='container-bloc w-55'>
-                <h1 className='bold'>Développeur web / mobile.</h1>
+            <div className='container-bloc w-60'>
+                <h1 className='bold'>Freelance Web & Mobile App Developer</h1>
                 <div className='para'>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris dignissim auctor enim, id elementum quam aliquam sit amet. Praesent vel mattis orci. Sed ac consequat leo, vel consequat eros. Curabitur ut ligula posuere</p>
-                    <p>
-                    augue vitae, fringilla erat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                    </p>
+                    <p>I began my university studies in Germany with a three-year Bachelor's program in Computer Science. I then continued my education in France, where I completed a Bac +4 and Bac +5 level training program, earning <a href="https://www.francecompetences.fr/recherche/rncp/35078/" style={{color:'lightblue',textDecoration:'underline'}} target="_blanc">the RNCP-certified title of IT and Information Systems Expert</a>... <a href='/about' style={{color:'lightblue',textDecoration:'underline'}}>Read more</a></p>
                 </div>
-                <button className="button-75"><span className="text">Télécharger mon CV</span></button>
+                <button className="button-75"><span className="text">Download my CV</span></button>
             </div>
-            <div className='rightbloc flex justify-content-space-around align-items-center gab25 w-30'>
+            <div className='rightbloc flex justify-content-space-between align-items-center gab25 w-35'>
                 <div className='project'>
-                    <h4>Projets</h4>
+                    <h4>Projects</h4>
                     <ul className='projet-list'>
                         <li><Link to={`/project-detail/projectEntreprise/3`}>Chicken grill</Link></li>
                         <li><Link to={`/project-detail/projectEntreprise/2`}>Kebab de la gare</Link></li>

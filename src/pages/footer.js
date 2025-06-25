@@ -4,8 +4,8 @@ export function Footer(){
     return (
         <footer>
            <div className='foot center flex justify-content-center flex-direction-column align-items-end'>
-                <div>©copyright {date} tout droit reservé</div>
-                <div>portfolio.fr</div>
+                <div>© Copyright {date} All rights reserved.</div>
+                <div>portfolio.rodcoding.com</div>
             </div> 
         </footer>
     )

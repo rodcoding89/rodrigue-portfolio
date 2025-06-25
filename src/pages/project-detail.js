@@ -21,30 +21,28 @@ export function ProjectDetail(){
     console.log('project',project);
     return (
         <div className="project-detail">
-            <div className='bg-img' style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/assets/images/bg-projects.jpg)` }}>
-            </div>
             <h1 className="bold teaser">{project.content.name}</h1>
             <div className="bloc-description gap25 flex align-items-center justify-content-center center">
                 <div className="img"><img src={process.env.PUBLIC_URL+'/assets/images/'+project.content.projectImgUrl} alt={project.content.name}/></div>
                 <div className="descrip">
-                    <p className="">{project.content.description}</p>
+                    <p className="" dangerouslySetInnerHTML={{__html:project.content.description}}/>
                     <div className="links flex gap20 justify-content-space-between align-items-center">
                         {
-                            project.content.gitLink.includes('#') ? (
-                                <Link to={project.content.gitLink} onClick={()=>{alert('Lien git pas disponible pour raison de confidentialité')}} className="git flex align-items-center justify-content-center flex-direction-column">
-                                    <h6>Github</h6>
-                                    <span className="flex gap10"><i className="fa fa-external-link" aria-hidden="true"></i>Lien github</span>
+                            project.content.gitLink.includes('unvailable') ? (
+                                <Link to={project.content.gitLink} onClick={()=>{alert('Git link unvailable for privacy reasons')}} className="git flex align-items-center justify-content-center flex-direction-column">
+                                    <h6>GitHub</h6>
+                                    <span className="flex gap10"><i className="fa fa-external-link" aria-hidden="true"></i>GitHub Link</span>
                                 </Link>
                             ): (
                                 <Link to={project.content.gitLink} target="_blank" className="git flex align-items-center justify-content-center flex-direction-column">
-                                    <h6>Github</h6>
-                                    <span className="flex gap10"><i className="fa fa-external-link" aria-hidden="true"></i>Lien github</span>
+                                    <h6>GitHub</h6>
+                                    <span className="flex gap10"><i className="fa fa-external-link" aria-hidden="true"></i>GitHub Link</span>
                                 </Link>
                             )
                         }
                         <Link to={project.content.link} target="_blank" className="site flex align-items-center justify-content-center flex-direction-column">
-                            <h6>Lien externe</h6>
-                            <span className="flex gap10"><i className="fa fa-external-link" aria-hidden="true"></i>Lien site</span>
+                            <h6>Link</h6>
+                            <span className="flex gap10"><i className="fa fa-external-link" aria-hidden="true"></i>Website Link</span>
                         </Link>
                     </div>
                 </div>
@@ -53,7 +51,7 @@ export function ProjectDetail(){
                 {
                     project.content.techno.map(t=>{
                         return (
-                            t.name !== 'Modules' ? (
+                            t.name !== 'Other Modules' ? (
                                 <div key={t.name} className="flex flex-direction-column align-items-center">
                                     <span className="regular">{t.name}</span>
                                     <img className="img-techno" src={process.env.PUBLIC_URL+'/assets/images/'+t.url} alt={t.name}/>

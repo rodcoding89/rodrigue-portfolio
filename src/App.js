@@ -14,9 +14,11 @@ function App() {
     <>
     <div className='content'>
       <div className='container'>
+          <div className='bg-img' style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/assets/images/bg-projects.jpg)` }}>
+        </div>
         <div className='header-container'>
             <div className='nav'>
-              <span className='logo'><img src = {process.env.PUBLIC_URL+'/assets/images/portfolio-logo.png'} alt='logo'/></span>
+              <span className='logo'><img src = {process.env.PUBLIC_URL+'/assets/images/logo.webp'} alt='logo'/></span>
               <div className='rightNav'>
                 <Header/>
                 <Socialmedia/>
@@ -28,7 +30,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/projects" element={<Project />} />
             <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path="https://rodcoding.com/" element={<Contact />} />
             <Route path="/project-detail/:type/:id" element={<ProjectDetail />} />
           </Routes>
         </main>

@@ -1,11 +1,11 @@
 export function About(){
     return (
         <div className="about center flex align-items-center height87">
-            <div>
-                <h1>A propos de moi</h1>
+            <div className="bloc-about">
+                <h1>About me</h1>
                 <div className="about-para flex align-items-center justify-content-center gap25">
-                    <p className="para">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
-                    <img className="w-40" src={process.env.PUBLIC_URL+'/assets/images/about.jpg'} alt="a propos de moi"/>
+                    <p className="para">I began my university studies in Germany with a three-year Bachelor's program in Computer Science. I then continued my education in France, where I completed a Bac +4 and Bac +5 level training program, earning <a href="https://www.francecompetences.fr/recherche/rncp/35078/" style={{color:'lightblue',textDecoration:'underline'}} target="_blanc">the RNCP-certified title of IT and Information Systems Expert</a>.<br/><br/>During my time in Germany, I worked as a web developer for several companies, first through internships and later as a student employee. In France, I also completed multiple internships related to my studies, as well as a work-study placement.<br/><br/>After completing my education, I decided to start my career as a freelance developer.</p>
+                    <img src={process.env.PUBLIC_URL+'assets/images/profil-photo.jpg'} alt='profil' className="about-img"/>
                 </div>
             </div>
         </div>

@@ -17,10 +17,10 @@ export function Header(){
         <header className={hambugerMenu ? 'menuhambuger':''}>
             <div onClick={()=>{handleRemoveNav()}} className='menu-button'></div>
             <nav>
-                <Link onClick={()=>{setHambugerMenu(false)}} to="/" className={pathname === '/'?'active-link light':'light'}>Acceuil</Link>
-                <Link onClick={()=>{setHambugerMenu(false)}} to="/projects" className={pathname === '/projects'?'active-link light':'light'}>Projets</Link>
-                <Link onClick={()=>{setHambugerMenu(false)}} to="/about" className={pathname === '/about'?'active-link light':'light'}>A propos</Link>
-                <Link onClick={()=>{setHambugerMenu(false)}} to="/contact" className={pathname === '/contact'?'active-link light':'light'}>Contact</Link>
+                <Link onClick={()=>{setHambugerMenu(false)}} to="/" className={pathname === '/'?'active-link light':'light'}>Home</Link>
+                <Link onClick={()=>{setHambugerMenu(false)}} to="/about" className={pathname === '/about'?'active-link light':'light'}>About</Link>
+                <Link onClick={()=>{setHambugerMenu(false)}} to="/projects" className={pathname === '/projects'?'active-link light':'light'}>Projects</Link>
+                <Link onClick={()=>{setHambugerMenu(false)}} to="https://rodcoding.com" className={pathname === '/contact'?'active-link light':'light'}>Contact</Link>
             </nav> 
         </header>
     )
