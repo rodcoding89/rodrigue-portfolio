@@ -59,7 +59,7 @@ export function ProjectDetail(){
                             ): (
                                 <div key={t.name} className="w-100">
                                     <span className="regular">{t.name}</span>
-                                    <div className="module-content flex gap25 align-items-center justify-content-space-around">
+                                    <div className="module-content flex gap25 align-items-center justify-content-space-around flex-wrap">
                                         {
                                             t.content.map(c=>{
                                                 return (<span>{c}</span>)

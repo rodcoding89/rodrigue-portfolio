@@ -32,18 +32,6 @@ export function SearchProject(){
                 }
             })
         })
-        projectList.projectPersonnel.forEach(p=>{
-            p.content.techno.forEach(t=>{
-                if (t.name.toLowerCase().includes(searchParam.toLowerCase())) {
-                    allProject.push(p);
-                    allProject = allProject.filter((value, index, self) => 
-                        index === self.findIndex((t) => (
-                          t.id === value.id
-                        ))
-                    );
-                }
-            })
-        })
         if (searchParam === '') {
             allProject = [];
         }

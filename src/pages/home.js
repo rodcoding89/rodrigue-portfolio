@@ -10,16 +10,16 @@ export function Home(){
                 </div>
                 <button className="button-75"><span className="text">Download my CV</span></button>
             </div>
-            <div className='rightbloc flex justify-content-space-between align-items-center gab25 w-35'>
+            <div className='rightbloc flex justify-content-space-between align-items-center gab10 w-35'>
                 <div className='project'>
                     <h4>Projects</h4>
                     <ul className='projet-list'>
                         <li><Link to={`/project-detail/projectEntreprise/3`}>Chicken grill</Link></li>
                         <li><Link to={`/project-detail/projectEntreprise/2`}>Kebab de la gare</Link></li>
                         <li><Link to={`/project-detail/projectEntreprise/1`}>Avlis formation</Link></li>
-                        <li><Link to={`/project-detail/projectFormation/7`}>Reservation de salle</Link></li>
-                        <li><Link to={`/project-detail/projectFormation/9`}>Site e-commerce</Link></li>
-                        <li><Link to={`/project-detail/projectPersonnel/12`}>Movie api</Link></li>
+                        <li><Link to={`/project-detail/projectFormation/13`}>Booking Sale</Link></li>
+                        <li><Link to={`/project-detail/projectFormation/10`}>LovSid</Link></li>
+                        <li><Link to={`/project-detail/projectPersonnel/15`}>Movie Api</Link></li>
                     </ul>
                 </div>
                 <div className='profil-foto'>
