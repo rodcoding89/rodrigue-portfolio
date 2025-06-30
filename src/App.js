@@ -10,6 +10,7 @@ import { Footer } from './pages/footer';
 import { ProjectDetail } from './pages/project-detail';
 function App() {
   console.log('url',process.env.PUBLIC_URL);
+ 
   return (
     <>
     <div className='content'>
@@ -27,11 +28,12 @@ function App() {
         </div>
         <main>
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/projects" element={<Project />} />
-            <Route path="/about" element={<About />} />
+            <Route path="/" element={<Home />}
+            />
+            <Route path="/projects" element={<Project />}/>
+            <Route path="/about" element={<About />}/>
             <Route path="https://rodcoding.com/" element={<Contact />} />
-            <Route path="/project-detail/:type/:id" element={<ProjectDetail />} />
+            <Route path="/project-detail/:type/:id" element={<ProjectDetail />}/>
           </Routes>
         </main>
         <Footer/>

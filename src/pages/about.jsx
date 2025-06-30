@@ -1,6 +1,9 @@
+import { MetaComponent } from './meta-data';
 export function About(){
     return (
-        <div className="about center flex align-items-center height87">
+        <>
+            <MetaComponent title='About me' description='About me and my journey in web development'/>
+            <div className="about center flex align-items-center height87">
             <div className="bloc-about">
                 <div className="about-para flex align-items-center justify-content-center gap25">
                     <div>
@@ -11,5 +14,6 @@ export function About(){
                 </div>
             </div>
         </div>
+        </>
     )
 }

@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { projectList } from "./project-data";
 import { Link } from 'react-router-dom';
+import { MetaComponent } from './meta-data';
 import '../style/index.scss';
 export function ProjectDetail(){
     const {type,id} = useParams();
@@ -20,7 +21,9 @@ export function ProjectDetail(){
     });
     console.log('project',project);
     return (
-        <div className="project-detail">
+        <>
+            <MetaComponent title={project.content.name} description={project.content.description}/>
+            <div className="project-detail">
             <h1 className="bold teaser">{project.content.name}</h1>
             <div className="bloc-description gap25 flex align-items-center justify-content-center center">
                 <div className="img"><img src={process.env.PUBLIC_URL+'/assets/images/'+project.content.projectImgUrl} alt={project.content.name}/></div>
@@ -73,5 +76,6 @@ export function ProjectDetail(){
                 }
             </div>
         </div>
+        </>
     )
 }

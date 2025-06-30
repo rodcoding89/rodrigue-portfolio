@@ -1,8 +1,12 @@
 import '../style/index.scss';
 import { Link } from 'react-router-dom';
+import { MetaComponent } from './meta-data';
+
 export function Home(){
     return (
-        <div className='home-container center flex align-items-center justify-content-space-between gap40 height87'>
+        <>
+            <MetaComponent title='Home' description='Home page and some project links'/>
+            <div className='home-container center flex align-items-center justify-content-space-between gap40 height87'>
             <div className='container-bloc w-60'>
                 <h1 className='bold'>Freelance Web & Mobile App Developer</h1>
                 <div className='para'>
@@ -27,5 +31,6 @@ export function Home(){
                 </div>
             </div>
         </div>
+        </>
     )
 }

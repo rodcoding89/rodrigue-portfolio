@@ -40,7 +40,7 @@ export function SearchProject(){
     }
     return (
         <div className='filterBloc'>
-            <input type="text" onChange={(e)=>{filterProject(e.target.value)}} className="searchInput" placeholder='Search a project by entering a technology'/>
+            <input type="text" onChange={(e)=>{filterProject(e.target.value)}} className="searchInput" placeholder='Search for a project by entering a technology'/>
             <div className='matchedProject'>
                 {
                     filtedProject.map(f=>{

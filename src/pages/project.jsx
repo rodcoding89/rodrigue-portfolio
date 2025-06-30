@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { SearchProject } from './search-project';
 import { projectList } from './project-data';
 import { Card } from './card';
+import { MetaComponent } from './meta-data';
 
 const sf = [
   "Develop static websites",
@@ -39,6 +40,8 @@ export function Project(){
   const [projectTraining,setProjectTraining] = useState('');
   const [personalProject,setPersonalProject] = useState('');
     return (
+      <>
+        <MetaComponent title='Projects' description='Project list and description'/>
         <div className='search-container'>
           <SearchProject/>
           <div className='competence center'>
@@ -122,5 +125,6 @@ export function Project(){
             </div>
           </div>
         </div>
+      </>
     )
 }
