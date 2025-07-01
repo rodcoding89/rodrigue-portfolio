@@ -5,7 +5,6 @@ import { Routes, Route } from 'react-router-dom';
 import { Home } from './pages/home';
 import { Project } from './pages/project';
 import { About } from './pages/about';
-import { Contact } from './pages/contact';
 import { Footer } from './pages/footer';
 import { ProjectDetail } from './pages/project-detail';
 function App() {
@@ -32,7 +31,6 @@ function App() {
             />
             <Route path="/projects" element={<Project />}/>
             <Route path="/about" element={<About />}/>
-            <Route path="https://rodcoding.com/" element={<Contact />} />
             <Route path="/project-detail/:type/:id" element={<ProjectDetail />}/>
           </Routes>
         </main>
