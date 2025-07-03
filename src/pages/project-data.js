@@ -243,7 +243,8 @@ export const projectList = {
                         name:'MySql',url:'mysql.svg'
                     },
                     {
-                        name:'Other Module',content:[]
+                        name:'Other Module',
+                        content:["isotop.js"]
                     }
                 ]
             }
@@ -283,7 +284,7 @@ export const projectList = {
                         name:'MySql',url:'mysql.svg'
                     },
                     {
-                        name:'Other Module',content:[]
+                        name:'Other Module',content:[PHPMailer]
                     }
                 ]
             }
