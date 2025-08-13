@@ -41,8 +41,8 @@ export const projectList = {
             id:2,
             content:{
                 name: 'Kebab de la gare',
-                link:'',
-                gitLink: '',
+                link:'https://kebab78.free.nf',
+                gitLink: 'https://github.com/rodcoding89/kebab78.git',
                 entreprise:'Waveconnect',
                 projectImgUrl: 'kebab-gare.webp',
                 year:'2021',
@@ -284,7 +284,7 @@ export const projectList = {
                         name:'MySql',url:'mysql.svg'
                     },
                     {
-                        name:'Other Module',content:[PHPMailer]
+                        name:'Other Module',content:['PHPMailer']
                     }
                 ]
             }
@@ -453,8 +453,8 @@ export const projectList = {
             id:13,
             content: {
                 name:'Booking Sale',
-                link:'',
-                gitLink: '',
+                link:'https://stwich.free.nf',
+                gitLink: 'https://github.com/rodcoding89/booking-salle.git',
                 pays:'France',
                 projectImgUrl: 'reservation-salle.webp',
                 year:'2022/2023',
@@ -491,10 +491,10 @@ export const projectList = {
             id:14,
             content: {
                 name:'Parimis hotel',
-                link:'https://parimis-hotel-rodrigue.netlify.app',
-                gitLink: '',
+                link:'https://rod-parimis-hotel.netlify.app/',
+                gitLink: 'https://github.com/rodcoding89/parimis-hotel.git',
                 pays:'France',
-                projectImgUrl: 'parimis.webp',
+                projectImgUrl: 'hotel.webp',
                 year:'2021',
                 logoEcole:'ifocop-logo.jpg',
                 class:'ifocop',
@@ -520,7 +520,7 @@ export const projectList = {
             id:15,
             content: {
                 name:'Movie Api',
-                link:'',
+                link:'https://movie-api-cyan-seven.vercel.app/',
                 gitLink: 'https://github.com/rodcoding89/moovie-api.git',
                 projectImgUrl: 'movie-api.webp',
                 year:'2023/2024',
