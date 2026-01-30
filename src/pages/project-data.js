@@ -78,8 +78,8 @@ export const projectList = {
             id:3,
             content: {
                 name:'Chicken grill',
-                link:'unvailable',
-                gitLink: 'unvailable',
+                link:'unavailable',
+                gitLink: 'unavailable',
                 entreprise:'Waveconnect',
                 projectImgUrl: 'chicken-grill.webp',
                 year:'2021',
@@ -182,7 +182,7 @@ export const projectList = {
             content: {
                 name:'Fieger',
                 link:'https://www.fieger-lamellenfenster.de/fr/',
-                gitLink: 'unvailable',
+                gitLink: 'unavailable',
                 entreprise:'Graphicon',
                 projectImgUrl: 'fieger.webp',
                 year:'2019',

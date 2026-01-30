@@ -19,7 +19,7 @@ export function ProjectDetail(){
             })
         }
     });
-    console.log('project',project);
+    //console.log('project',project);
     return (
         <>
             <MetaComponent title={project.content.name} description={project.content.description}/>
@@ -31,22 +31,31 @@ export function ProjectDetail(){
                     <p className="" dangerouslySetInnerHTML={{__html:project.content.description}}/>
                     <div className="links flex gap20 justify-content-space-between align-items-center">
                         {
-                            project.content.gitLink.includes('unvailable') ? (
-                                <Link to={project.content.gitLink} onClick={()=>{alert('Git link unvailable for privacy reasons')}} className="git flex align-items-center justify-content-center flex-direction-column">
+                            project.content.gitLink.includes('unavailable') ? (
+                                <span onClick={()=>{alert('Git link unavailable for privacy reasons')}} className="git py-2 px-4 border-[1px] border-solid border-blue-700 rounded-lg cursor-pointer flex align-items-center justify-content-center flex-direction-column">
                                     <h6>GitHub</h6>
                                     <span className="flex gap10"><i className="fa fa-external-link" aria-hidden="true"></i>GitHub Link</span>
-                                </Link>
+                                </span>
                             ): (
-                                <Link to={project.content.gitLink} target="_blank" className="git flex align-items-center justify-content-center flex-direction-column">
+                                <Link to={project.content.gitLink} target="_blank" className="git py-2 px-4 border-[1px] border-solid border-blue-700 rounded-lg cursor-pointer flex align-items-center justify-content-center flex-direction-column">
                                     <h6>GitHub</h6>
                                     <span className="flex gap10"><i className="fa fa-external-link" aria-hidden="true"></i>GitHub Link</span>
                                 </Link>
                             )
                         }
-                        <Link to={project.content.link} target="_blank" className="site flex align-items-center justify-content-center flex-direction-column">
-                            <h6>Link</h6>
-                            <span className="flex gap10"><i className="fa fa-external-link" aria-hidden="true"></i>Website Link</span>
-                        </Link>
+                        {
+                            project.content.link.includes('unavailable') ? (
+                                <span onClick={()=>{alert('Website unavailable for maintenance reasons')}} className="git py-2 px-4 border-[1px] border-solid border-blue-700 rounded-lg cursor-pointer flex align-items-center justify-content-center flex-direction-column">
+                                    <h6>Link</h6>
+                                    <span className="flex gap10"><i className="fa fa-external-link" aria-hidden="true"></i>Website Link</span>
+                                </span>
+                            ) : (
+                                <Link to={project.content.link} target="_blank" className="site py-2 px-4 border-[1px] border-solid border-blue-700 rounded-lg cursor-pointer flex align-items-center justify-content-center flex-direction-column">
+                                    <h6>Link</h6>
+                                    <span className="flex gap10"><i className="fa fa-external-link" aria-hidden="true"></i>Website Link</span>
+                                </Link>
+                            )
+                        }
                     </div>
                 </div>
             </div>
